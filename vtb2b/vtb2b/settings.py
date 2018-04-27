@@ -25,7 +25,7 @@ SECRET_KEY = 'tlt9fv++3okfeljv9x$@_&glms2jg0p6*h-ogi)1fwhp951+xj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vtpower.pythonanywhere.com']
 
 
 # Application definition
