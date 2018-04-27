@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Inventario{% endblock %}
+
+{% block content %}
+      <div class="cabecera">
+        <h1 class="text-center"> Stock de productos VT </h1>
+      </div>
+
+      <table class="table table-hover" id="tabla_stock">
+        <thead>
+          <tr>
+            <th scope="col">Referencia</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        {% for ref in referencias %}
+            <tr>
+              <td>{{ ref.referencia }}</td>
+              <td>{{ ref.cantidad }}</td>
+            </tr>
+        {% endfor %}
+      </table>
+
+      <p><a href="{% url 'logout' %}">Cerrar sesión</a></p>
+  {% endblock %}
