@@ -43,7 +43,7 @@ hoja = libro["Hoja1"]
 #crear diccionario para guardar los datos
 col_ref, col_stock = obtener_nombres(hoja)
 inventario = {}
-con = conectar_bd('C:/Users/rvillar/Dropbox/Code/inventario/vtb2b/db.sqlite3')
+con = conectar_bd(os.environ['BBDD'])
 vaciar_tabla_inventario(con)
 
 for fila in range(2, hoja.max_row + 1):
